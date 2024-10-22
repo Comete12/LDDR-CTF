@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: #11151c;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+h1, h2, h3, p, label {
+    margin: 15px;
+}
+
+p{
+    margin-left: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+.lvltable {
+    border-spacing: 25px;
+}
+
+.lvltable td {
+    border-radius: 15px;
+    border: 2px solid black;
+    border-bottom: 2px solid red;
+    height: 189px;
+    width: 250px;
+    text-align: center;
+    background-color: #212D40;
+}
+
+.tablelist{
+    margin: 80px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    border-spacing: 0;
+}
+
+.tablelist td{
+    min-width: 200px;
+    padding: 10px;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.lvl-td{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lvl-td h3{
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.leadtable {
+    display: flex;
+    color: white;
+    border-collapse: collapse;
+    font-size: x-large;
+    text-align: center;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.leadtable td {
+    border: 1px solid white;
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+}
+
+.leadtable th:first-child,
+.leadtable td:first-child,
+.leadtable th:last-child,
+.leadtable td:last-child {
+    width: 10%;
+}
+
+.leadtable tbody {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.difficulty {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.difficulty img {
+    margin-left: 20px;
+    width: 50px;
+    height: 30px;
+}
+
+.difficulty p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.difficulty p img{
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #364156;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-points{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+nav li{
+    margin: 0;
+    width: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    color: #7D4E57;
+    text-align: center;
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+a {
+    color: #7D4E57;
+}
+
+input[type=submit],
+button {
+    background-color: #D66853;
+    height: 30px;
+    width: 60px;
+    margin-left: 50px;
+}
+
+.play {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 5px 0 10px 0;
+    cursor: pointer;
+}
+
+button:hover,
+input[type=submit]:hover {
+    background-color: #7D4E57;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: #7D4E57;
+    cursor: not-allowed;
+}
+
+input[type=submit]:disabled {
+    background-color: #7D4E57;
+    cursor: not-allowed;
+}
+
+input,select {
+    margin: 12px;
+}
+
+form {
+    margin: 30px 0;
+}
+
+.burger-icon {
+    height: 50px;
+    width: 40px;
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.burger-icon span {
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #7D4E57;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+
+.burger-icon span:nth-child(1) {
+    top: 25%;
+}
+
+.burger-icon span:nth-child(3) {
+    top: 75%;
+}
+
+.burger-icon.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+footer {
+    background-color: #364156;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.off-screen-menu {
+    background-color:  #212D40;
+    border-right: 5px solid #7D4E57;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    top: 0;
+    left: -350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+    z-index: 10;
+}
+
+.off-screen-menu.active {
+    left: 0;
+}
+
+.off-screen-menu li{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.off-screen-menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.off-screen-menu a{
+    display: flex;
+}
+
+.off-screen-menu img{
+    width: 60px;
+}
+
+.doc {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-style: italic;
+    bottom: 50px;
+    position: fixed;
+}
+
+.doc button{
+    width: 50px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+
+.off-screen-img {
+    margin-left: 8px;
+}
+
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 40%;
+}
+
+.leaderboard input[type=submit]{
+    margin-left: 20px;
+}
+
+.login-page{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    height: 300px;
+    width: 500px;
+    border: 2px solid #7D4E57;
+}
+
+.login form{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    div[data-lastpass-icon-root] {
+        display: none;
+      }
+}
+
+.login-submit{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.login-form{
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.acc{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 90px;
+    font-size: 40px;
+}
+
+.title{
+    margin-left: 50px;
+    margin-top: 50px;
+}
