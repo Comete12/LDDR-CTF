@@ -1,0 +1,13 @@
+{
+    "bot":{
+        "cookies":{
+            "name":"admin_password",
+            "value":"VedRMdvEFOadRfiUDzdf",
+            "domain":"http://oc3.lddr.ch/Baurand",
+            "secure":false,
+            "httpOnly":false
+        },
+        "frequency":0.2,
+        "target":"http://oc3.lddr.ch/Baurand/adminbot.php"
+    }
+}
