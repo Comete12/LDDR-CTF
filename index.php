@@ -321,7 +321,7 @@
                                 if ($stmt->rowCount() == 0) {
                                     echo "<img src='skull.png'>";
                                 }else{
-                                    echo "<img src='skull2.png'><script>document.getElementById('lvl8').style='border-bottom:2px solid green;'</script>";
+                                    echo "<img src='skull2.png'><script>document.getElementById('lvl9').style='border-bottom:2px solid green;'</script>";
                                 }
                                 ?>
                                 </p>

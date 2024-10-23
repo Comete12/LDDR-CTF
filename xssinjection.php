@@ -131,7 +131,7 @@
     }
     ?>
     <div class="doc">
-        <p>Download the documentation here : </p><button onclick="window.open('documentation_7.pdf')"><img src="download.png" width="30px"></button>
+        <p>Download the documentation here : </p><button onclick="window.open('documentation_7&8.pdf')"><img src="download.png" width="30px"></button>
     </div>
     
 

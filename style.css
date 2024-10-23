@@ -379,15 +379,74 @@ footer {
     margin-top: 20px;
     margin-left: 50px;
 }
+
 .acc{
-    display: flex;
-    align-items: center;
-    margin-left: 100px;
-    margin-top: 90px;
-    font-size: 40px;
+    font-size: 20px;
+}
+
+.acc label{
+    margin-left: 50px;
+    margin-right: 0;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.acc input{
+    margin-left: 10px;
+    background-color: #11151c;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.acc input[type='submit']{
+    margin-left: 10px;
+    background-color: #D66853;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.acc p{
+    margin-bottom: 40px;
+    margin-top: 0;
 }
 
 .title{
     margin-left: 50px;
     margin-top: 50px;
+}
+
+textarea{
+    margin-left: 50px;
+    height: 125px;
+    width: 280px;
+}
+
+.del{
+    margin-top: 90px;
+    display: flex;
+    height: 50%;
+    justify-content: space-around;
+}
+
+.del input, button{
+    margin: 0;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.bdel{
+    font-size: 20px;
+    margin-top: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.bdel button{
+    height: 40px;
+    width: 80px;
 }

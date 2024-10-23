@@ -42,9 +42,6 @@
             </div>
         </nav>
         <?php
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        error_reporting(E_ALL);
         $servername ="localhost";
         $username ="DBuser9_62";
         $password ="root";
@@ -59,33 +56,30 @@
             echo "Erreur :". $e->getMessage();
         }
 
-        $req = $conn->prepare("SELECT username, points, rank FROM users WHERE email = :email");
-        $req->execute(['email' => $_SESSION['email']]);
-        $rep = $req->fetch();
-        if($rep){
-            echo "<form class='acc' method='POST' action=''>
-                    <label for='username'>Username :</label>
-                    <input type='text' name='username' value='" . htmlspecialchars($rep['username']) . "'>
-                    <input type='submit' value='EDIT'>
-                    <p>Rank : " . htmlspecialchars($rep['rank']) . "</p>
-                    <p>Points : " . htmlspecialchars($rep['points']) . "</p>
-                </form>";
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            $req = $conn->prepare("DELETE FROM users WHERE email = :email");
+            $req->execute(['email' => $_SESSION['email']]);
+            $req = $conn->prepare("DELETE FROM completed_levels WHERE email = :email");
+            $req->execute(['email' => $_SESSION['email']]);
+            session_unset();
+            session_destroy();
+            header("location:index.php");
         }
         ?>
-        <div class="bdel">
-            <p>DELETE ACCOUNT </p><button onclick="window.location.href='deleteaccount.php'">HERE</button>
-        </div>
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $username = $_POST['username'];
-            if ($username != "") {
-                $req = $conn->prepare("UPDATE users SET username = :username WHERE email = :email");
-                $req->execute(['username' => $username, 'email' => $_SESSION['email']]);
-            }
-        }
 
-        ?>
-
+    <div class="login-page">
+        <div class="login">
+            <h1>ARE YOU SURE ?</h1>
+            <p style="text-align: center; margin: 0;">this will erase all your data</p>
+            <div class="del">
+                <form method="POST" action="">
+                    <input type="submit" value="YES">
+                </form>
+                <button onclick="window.location.href='account.php'">NO</button>
+            </div>
+        </div>   
+    </div>
+        
         <script>
             function $(id) {
                 return document.getElementById(id)
