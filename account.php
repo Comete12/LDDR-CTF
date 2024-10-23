@@ -81,6 +81,7 @@
             if ($username != "") {
                 $req = $conn->prepare("UPDATE users SET username = :username WHERE email = :email");
                 $req->execute(['username' => $username, 'email' => $_SESSION['email']]);
+                header("location:index.php");
             }
         }
 
